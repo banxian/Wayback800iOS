@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA77DB7C168F7194006B1C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7B168F7194006B1C35 /* UIKit.framework */; };
+		EA77DB7E168F7194006B1C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7D168F7194006B1C35 /* Foundation.framework */; };
+		EA77DB80168F7194006B1C35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7F168F7194006B1C35 /* CoreGraphics.framework */; };
+		EA77DB86168F7194006B1C35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA77DB84168F7194006B1C35 /* InfoPlist.strings */; };
+		EA77DB88168F7194006B1C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77DB87168F7194006B1C35 /* main.m */; };
+		EA77DB8C168F7194006B1C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77DB8B168F7194006B1C35 /* AppDelegate.m */; };
+		EA77DB8F168F7194006B1C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77DB8E168F7194006B1C35 /* ViewController.m */; };
+		EA77DB92168F7194006B1C35 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA77DB90168F7194006B1C35 /* ViewController_iPhone.xib */; };
+		EA77DB95168F7194006B1C35 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA77DB93168F7194006B1C35 /* ViewController_iPad.xib */; };
+		EA77DB9D168F7194006B1C35 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB9C168F7194006B1C35 /* SenTestingKit.framework */; };
+		EA77DB9E168F7194006B1C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7B168F7194006B1C35 /* UIKit.framework */; };
+		EA77DB9F168F7194006B1C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7D168F7194006B1C35 /* Foundation.framework */; };
+		EA77DBA7168F7194006B1C35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA77DBA5168F7194006B1C35 /* InfoPlist.strings */; };
+		EA77DBAA168F7194006B1C35 /* Sim800Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77DBA9168F7194006B1C35 /* Sim800Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA77DBA0168F7194006B1C35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA77DB6E168F7194006B1C35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA77DB76168F7194006B1C35;
+			remoteInfo = Sim800;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA77DB77168F7194006B1C35 /* Sim800.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sim800.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA77DB7B168F7194006B1C35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA77DB7D168F7194006B1C35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA77DB7F168F7194006B1C35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA77DB83168F7194006B1C35 /* Sim800-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sim800-Info.plist"; sourceTree = "<group>"; };
+		EA77DB85168F7194006B1C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA77DB87168F7194006B1C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA77DB89168F7194006B1C35 /* Sim800-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sim800-Prefix.pch"; sourceTree = "<group>"; };
+		EA77DB8A168F7194006B1C35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA77DB8B168F7194006B1C35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA77DB8D168F7194006B1C35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA77DB8E168F7194006B1C35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA77DB91168F7194006B1C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		EA77DB94168F7194006B1C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		EA77DB9B168F7194006B1C35 /* Sim800Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sim800Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA77DB9C168F7194006B1C35 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EA77DBA4168F7194006B1C35 /* Sim800Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sim800Tests-Info.plist"; sourceTree = "<group>"; };
+		EA77DBA6168F7194006B1C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA77DBA8168F7194006B1C35 /* Sim800Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sim800Tests.h; sourceTree = "<group>"; };
+		EA77DBA9168F7194006B1C35 /* Sim800Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sim800Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA77DB74168F7194006B1C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77DB7C168F7194006B1C35 /* UIKit.framework in Frameworks */,
+				EA77DB7E168F7194006B1C35 /* Foundation.framework in Frameworks */,
+				EA77DB80168F7194006B1C35 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA77DB97168F7194006B1C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77DB9D168F7194006B1C35 /* SenTestingKit.framework in Frameworks */,
+				EA77DB9E168F7194006B1C35 /* UIKit.framework in Frameworks */,
+				EA77DB9F168F7194006B1C35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA77DB6C168F7194006B1C35 = {
+			isa = PBXGroup;
+			children = (
+				EA77DB81168F7194006B1C35 /* Sim800 */,
+				EA77DBA2168F7194006B1C35 /* Sim800Tests */,
+				EA77DB7A168F7194006B1C35 /* Frameworks */,
+				EA77DB78168F7194006B1C35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA77DB78168F7194006B1C35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA77DB77168F7194006B1C35 /* Sim800.app */,
+				EA77DB9B168F7194006B1C35 /* Sim800Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA77DB7A168F7194006B1C35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA77DB7B168F7194006B1C35 /* UIKit.framework */,
+				EA77DB7D168F7194006B1C35 /* Foundation.framework */,
+				EA77DB7F168F7194006B1C35 /* CoreGraphics.framework */,
+				EA77DB9C168F7194006B1C35 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA77DB81168F7194006B1C35 /* Sim800 */ = {
+			isa = PBXGroup;
+			children = (
+				EA77DB8A168F7194006B1C35 /* AppDelegate.h */,
+				EA77DB8B168F7194006B1C35 /* AppDelegate.m */,
+				EA77DB8D168F7194006B1C35 /* ViewController.h */,
+				EA77DB8E168F7194006B1C35 /* ViewController.m */,
+				EA77DB90168F7194006B1C35 /* ViewController_iPhone.xib */,
+				EA77DB93168F7194006B1C35 /* ViewController_iPad.xib */,
+				EA77DB82168F7194006B1C35 /* Supporting Files */,
+			);
+			path = Sim800;
+			sourceTree = "<group>";
+		};
+		EA77DB82168F7194006B1C35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA77DB83168F7194006B1C35 /* Sim800-Info.plist */,
+				EA77DB84168F7194006B1C35 /* InfoPlist.strings */,
+				EA77DB87168F7194006B1C35 /* main.m */,
+				EA77DB89168F7194006B1C35 /* Sim800-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA77DBA2168F7194006B1C35 /* Sim800Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EA77DBA8168F7194006B1C35 /* Sim800Tests.h */,
+				EA77DBA9168F7194006B1C35 /* Sim800Tests.m */,
+				EA77DBA3168F7194006B1C35 /* Supporting Files */,
+			);
+			path = Sim800Tests;
+			sourceTree = "<group>";
+		};
+		EA77DBA3168F7194006B1C35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA77DBA4168F7194006B1C35 /* Sim800Tests-Info.plist */,
+				EA77DBA5168F7194006B1C35 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA77DB76168F7194006B1C35 /* Sim800 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA77DBAD168F7194006B1C35 /* Build configuration list for PBXNativeTarget "Sim800" */;
+			buildPhases = (
+				EA77DB73168F7194006B1C35 /* Sources */,
+				EA77DB74168F7194006B1C35 /* Frameworks */,
+				EA77DB75168F7194006B1C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sim800;
+			productName = Sim800;
+			productReference = EA77DB77168F7194006B1C35 /* Sim800.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA77DB9A168F7194006B1C35 /* Sim800Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA77DBB0168F7194006B1C35 /* Build configuration list for PBXNativeTarget "Sim800Tests" */;
+			buildPhases = (
+				EA77DB96168F7194006B1C35 /* Sources */,
+				EA77DB97168F7194006B1C35 /* Frameworks */,
+				EA77DB98168F7194006B1C35 /* Resources */,
+				EA77DB99168F7194006B1C35 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA77DBA1168F7194006B1C35 /* PBXTargetDependency */,
+			);
+			name = Sim800Tests;
+			productName = Sim800Tests;
+			productReference = EA77DB9B168F7194006B1C35 /* Sim800Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA77DB6E168F7194006B1C35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = banxian;
+			};
+			buildConfigurationList = EA77DB71168F7194006B1C35 /* Build configuration list for PBXProject "Sim800" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA77DB6C168F7194006B1C35;
+			productRefGroup = EA77DB78168F7194006B1C35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA77DB76168F7194006B1C35 /* Sim800 */,
+				EA77DB9A168F7194006B1C35 /* Sim800Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA77DB75168F7194006B1C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77DB86168F7194006B1C35 /* InfoPlist.strings in Resources */,
+				EA77DB92168F7194006B1C35 /* ViewController_iPhone.xib in Resources */,
+				EA77DB95168F7194006B1C35 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA77DB98168F7194006B1C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77DBA7168F7194006B1C35 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA77DB99168F7194006B1C35 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA77DB73168F7194006B1C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77DB88168F7194006B1C35 /* main.m in Sources */,
+				EA77DB8C168F7194006B1C35 /* AppDelegate.m in Sources */,
+				EA77DB8F168F7194006B1C35 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA77DB96168F7194006B1C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77DBAA168F7194006B1C35 /* Sim800Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA77DBA1168F7194006B1C35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA77DB76168F7194006B1C35 /* Sim800 */;
+			targetProxy = EA77DBA0168F7194006B1C35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA77DB84168F7194006B1C35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA77DB85168F7194006B1C35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA77DB90168F7194006B1C35 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA77DB91168F7194006B1C35 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		EA77DB93168F7194006B1C35 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA77DB94168F7194006B1C35 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		EA77DBA5168F7194006B1C35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA77DBA6168F7194006B1C35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA77DBAB168F7194006B1C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA77DBAC168F7194006B1C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA77DBAE168F7194006B1C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sim800/Sim800-Prefix.pch";
+				INFOPLIST_FILE = "Sim800/Sim800-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA77DBAF168F7194006B1C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sim800/Sim800-Prefix.pch";
+				INFOPLIST_FILE = "Sim800/Sim800-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EA77DBB1168F7194006B1C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sim800.app/Sim800";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sim800/Sim800-Prefix.pch";
+				INFOPLIST_FILE = "Sim800Tests/Sim800Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EA77DBB2168F7194006B1C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sim800.app/Sim800";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sim800/Sim800-Prefix.pch";
+				INFOPLIST_FILE = "Sim800Tests/Sim800Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA77DB71168F7194006B1C35 /* Build configuration list for PBXProject "Sim800" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA77DBAB168F7194006B1C35 /* Debug */,
+				EA77DBAC168F7194006B1C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA77DBAD168F7194006B1C35 /* Build configuration list for PBXNativeTarget "Sim800" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA77DBAE168F7194006B1C35 /* Debug */,
+				EA77DBAF168F7194006B1C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA77DBB0168F7194006B1C35 /* Build configuration list for PBXNativeTarget "Sim800Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA77DBB1168F7194006B1C35 /* Debug */,
+				EA77DBB2168F7194006B1C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA77DB6E168F7194006B1C35 /* Project object */;
+}
