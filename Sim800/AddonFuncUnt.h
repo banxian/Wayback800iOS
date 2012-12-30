@@ -1,0 +1,48 @@
+#ifndef _ADDON_FUNC_UNIT
+#define _ADDON_FUNC_UNIT
+
+#include <string>
+#include <QtGui/QImage>
+#include <QtCore/QFile>
+#include "wintypes.h"
+
+
+using std::string;
+using std::wstring;
+
+
+enum TImageType {
+    itUnknown = -1, itTarga, itBitmap, itPNG, itJPEG, itGif, itHDPhoto, itPKArchive, itRarArchive
+};
+
+void Normalize8bitQImage( QImage& qimage ); // or Indexed8
+void QuantizeToGrayscaleQImage( QImage& qimage, bool dither = false ); // diffusion?
+void ReplaceAlphaWithChecker( QImage& qimage );
+void UncropImage( QImage& qimage, int destwidth, int destheight );
+void AutocropImage( QImage& qimage, bool fromdualpage, bool isleftpage );
+bool IsGrayscaleImage(const QImage& qimage);
+void AutoExposureImage( QImage& qimage, bool heavy = false );
+int GetFreePhysMemory();
+quint16 readuint16(QIODevice& qfile, bool bigendian = false, bool peek = false);
+quint32 readuint32(QIODevice& qfile, bool bigendian = false, bool peek = false);
+QImage NewQImageFromEXIFThumbnail(QFile& qfile);
+TImageType GuessMIMEType(QIODevice* file);
+TImageType GuessMIMEType(const QString& filename);
+TImageType ExtToMIMEType(const QString& extname);
+QString MIMETypeToExt(TImageType type);
+
+wstring StringToWideString(const string& Source, unsigned int Codepage = 0);
+QByteArray qUncompressEx(const uchar* data, int nbytes, int outputbytes);
+QByteArray qUncompressEx1(const uchar* data, int nbytes, int outputbytes);
+QByteArray qCompressEx(const uchar* data, int nbytes, int compressionLevel);
+
+bool SaveByteArrayToFile( const QString& filename, const QByteArray& content );
+
+bool QRectContains(const QRect& rect, int x, int y);
+
+int greedydiv(int n, int m);
+int getCpuCount();
+#ifndef _WIN32
+unsigned int GetTickCount();
+#endif
+#endif

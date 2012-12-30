@@ -92,7 +92,7 @@ TMainViewBridge::TMainViewBridge(void *view)
             this, SLOT(onStepFinished(quint16)));
     
     initLcdStripe();
-    fKeypadRect = QRect(8, fLCDEmpty.height() + 8, stagesize.width - 16, 260);
+    fKeypadRect = QRect(8, fLCDEmpty.height() + 8, stagesize.width - 16, 360);
     initKeypad();
     //QByteArray* dummybuf = new QByteArray(160*80/8, 0xFFu);
     //onLCDBufferChanged(dummybuf);
@@ -502,7 +502,7 @@ void TMainViewBridge::onMouseDown( int x1, int y1 )
     bool hitted = false;
     x1 -= fKeypadRect.left();
     y1 -= fKeypadRect.top();
-    NSLog(@"x1: %d, y1: %d", x1, y1);
+    //NSLog(@"x1: %d, y1: %d", x1, y1);
     for (int y = 0; y < 8; y++) {
         for (int x = 0; x < 8; x++) {
             TKeyItem* item = fKeyItems[y][x];
@@ -523,7 +523,7 @@ void TMainViewBridge::onMouseUp( int x1, int y1 )
     bool hitted = false;
     x1 -= fKeypadRect.left();
     y1 -= fKeypadRect.top();
-    NSLog(@"x1: %d, y1: %d", x1, y1);
+    //NSLog(@"x1: %d, y1: %d", x1, y1);
     for (int y = 0; y < 8; y++) {
         for (int x = 0; x < 8; x++) {
             TKeyItem* item = fKeyItems[y][x];
