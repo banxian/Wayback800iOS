@@ -1,7 +1,11 @@
 #include "NekoDriver.h"
 #include "wintypes.h"
 extern "C" {
-#include "ANSI/65c02.h"
+#ifdef HANDYPSP
+#include "ANSI/w65c02.h"
+#else
+#include "ANSI/65C02.h"
+#endif
 }
 #include <QtCore/QFile>
 #include "CC800IOName.h"
@@ -227,7 +231,11 @@ void MemReset ()
 
     // Initialize the cpu
     CpuInitialize(); // Read pc from reset vector
+#ifdef HANDYPSP
+    setPS(0x24);
+#else
     regs.ps = 0x24; // 00100100 unused P(bit5) = 1, I(bit3) = 1, B(bit4) = 0
+#endif
 }
 
 void InitRAM0IO() 

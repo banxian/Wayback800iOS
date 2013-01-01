@@ -1,7 +1,11 @@
 #include "NekoDriver.h"
 #include "DBCentre.h"
 extern "C" {
-#include "ANSI/65c02.h"
+#ifdef HANDYPSP
+#include "ANSI/w65c02.h"
+#else
+#include "ANSI/65C02.h"
+#endif
 }
 #include "CC800IOName.h"
 #include "AddonFuncUnt.h" // GetTickCount
@@ -134,7 +138,11 @@ EmulatorThread::EmulatorThread( char* brom, char* nor )
     , lastTicket(0)
     , totalcycle(0)
     , measured(false)
-    , remeasure(2)
+#ifdef AUTOTEST
+    , remeasure(0)
+#else
+    , remeasure(0)
+#endif
     , batchlimiter(0)
     , batchcount(UINT_MAX)
     , sleepgap(10)
@@ -186,12 +194,32 @@ void EmulatorThread::run()
     //stp = 1; // test
     unsigned int nmistart = GetTickCount();
     gThreadFlags &= 0xFFFEu; // Remove 0x01 from gThreadFlags (stack related)
+#ifdef AUTOTEST
+    unsigned totalline = 0;
+    enablelogging = false;
+#endif
     while(fKeeping) {
         const unsigned spdc1016freq = GlobalSetting.SPDC1016Frequency;
 
         while (batchcount >= 0 && fKeeping) {
+#ifdef AUTOTEST
+            totalline++;
+            TryTest(totalline);
+#endif
             //qDebug("PC:0x%04x, opcode: 0x%06x", regs.pc, (*(LPDWORD)(mem+regs.pc)) & 0xFFFFFF);
-            //LogDisassembly(regs.pc, NULL);
+#ifdef LOGASM
+#ifdef AUTOTEST
+            if (enablelogging) {
+#endif
+#ifdef HANDYPSP
+                LogDisassembly(mPC, NULL);
+#else
+                LogDisassembly(regs.pc, NULL);
+#endif
+#ifdef AUTOTEST
+            }
+#endif
+#endif // LOGASM
             if (matrixupdated) {
                 matrixupdated = false;
                 AppendLog("keypadmatrix updated.");
@@ -199,14 +227,14 @@ void EmulatorThread::run()
 
             unsigned int dummynow = GetTickCount();
             nmicount++;
-#ifdef DEBUG
+#ifdef FAKENMI
             if (nmicount % 400000 == 0){
 #else
             if (dummynow - nmistart >= 500){
 #endif
                 // 2Hz NMI
                 // TODO: use batchcount as NMI
-#ifdef DEBUG
+#ifdef FAKENMI
                 //if (dummynow - nmistart >= 1000) {
                 //    // Debugger
                 //    nmistart = dummynow - 3000; // delay 3s
@@ -225,13 +253,18 @@ void EmulatorThread::run()
             // NMI > IRQ
             if ((gThreadFlags & 0x08) != 0) {
                 gThreadFlags &= 0xFFF7u; // remove 0x08 NMI Flag
-                nmi = 0; // next CpuExecute will execute two instructions
+                // FIXME: NO MORE REVERSE
+                g_nmi = TRUE; // next CpuExecute will execute two instructions
                 qDebug("ggv wanna NMI.");
                 //fprintf(stderr, "ggv wanna NMI.\n");
                 gDeadlockCounter--; // wrong behavior of wqxsim
+#ifdef HANDYPSP
+            } else if (((PS() & 0x4) == 0) && ((gThreadFlags & 0x10) != 0)) {
+#else
             } else if (((regs.ps & 0x4) == 0) && ((gThreadFlags & 0x10) != 0)) {
+#endif
                 gThreadFlags &= 0xFFEFu; // remove 0x10 IRQ Flag
-                irq = 0; // B flag will remove in CpuExecute (AF_BREAK)
+                g_irq = TRUE; // B flag will remove in CpuExecute (AF_BREAK)
                 qDebug("ggv wanna IRQ.");
                 gDeadlockCounter--; // wrong behavior of wqxsim
             }
@@ -273,7 +306,11 @@ void EmulatorThread::run()
                     fixedram0000[io01_int_enable] |= 0x1; // TIMER A INTERRUPT ENABLE
                     fixedram0000[io02_timer0_val] |= 0x1; // [io01+1] Timer0 bit1 = 1
                     gThreadFlags &= 0xFF7F;      // remove 0x80 | 0x10
+#ifdef HANDYPSP
+                    mPC = *(unsigned short*)&pmemmap[mapE000][0x1FFC];
+#else
                     regs.pc = *(unsigned short*)&pmemmap[mapE000][0x1FFC];
+#endif
                 }
             } else {
                 if (timer0started) {
@@ -389,6 +426,50 @@ void EmulatorThread::StopKeeping()
 {
     fKeeping = false;
 }
+
+#ifdef AUTOTEST
+void EmulatorThread::TryTest( unsigned line )
+{
+    // Network
+    if (line == 1024000) {
+        keypadmatrix[1][6] = 1;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+    if (line == 1064000) {
+        keypadmatrix[1][6] = 0;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+    // Down
+    if (line == 1224000) {
+        keypadmatrix[6][3] = 1;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+    if (line == 1264000) {
+        keypadmatrix[6][3] = 0;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+    // Enter
+    if (line == 1424000) {
+        keypadmatrix[6][5] = 1;
+        CheckLCDOffShift0AndEnableWatchDog();
+        enablelogging = true;
+    }
+    if (line == 1524000) {
+        keypadmatrix[6][5] = 0;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+    // Splash
+    if (line == 4724000) {
+        keypadmatrix[6][5] = 1;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+    if (line == 4764000) {
+        keypadmatrix[6][5] = 0;
+        CheckLCDOffShift0AndEnableWatchDog();
+    }
+
+}
+#endif
 
 void CheckLCDOffShift0AndEnableWatchDog()
 {

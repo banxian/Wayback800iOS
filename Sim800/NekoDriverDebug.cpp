@@ -1,6 +1,10 @@
 #include "NekoDriver.h"
 extern "C" {
-#include "ANSI/65c02.h"
+#ifdef HANDYPSP
+#include "ANSI/w65c02.h"
+#else
+#include "ANSI/65C02.h"
+#endif
 }
 #include <QtCore/QDebug>
 
@@ -320,7 +324,7 @@ instrec instruction[257] = { {"BRK",ADDR_ABS},              // 00h
 FILE* logfile = NULL;
 
 const char* GetSymbol (WORD address, int bytes);
-const char *byte_to_binary ( unsigned char c );
+const char *byte_to_binary ( unsigned char c, char* b );
 
 
 unsigned logpos = 0;
@@ -332,7 +336,10 @@ WORD LogDisassembly ( WORD offset, char* text )
     if (logfile == NULL) {
         char* filepath = new char[260];
         getcwd(filepath, 260);
-        strcat(filepath, "\\Sim800.txt");
+        if (char* pos = strrchr(filepath, '/')) {
+            *pos = 0;
+        }
+        strcat(filepath, "/Documents/Sim800.txt");
         //logfile = _tfopen(filepath, TEXT("w"));
         logfile = fopen(filepath, "wt");
         delete[] filepath;
@@ -423,6 +430,12 @@ WORD LogDisassembly ( WORD offset, char* text )
         fflush(logfile);
         logpos = 0;
     }
+    char psbin[9];
+#ifdef HANDYPSP
+    byte_to_binary(PS(), psbin);
+#else
+    byte_to_binary(regs.ps, psbin);
+#endif
     logpos += sprintf(&logbuff[logpos],
     //sprintf(fulltext,
         "%04X  %s  %-4s %-8s  %02X %02X %02X %04X %s\n",
@@ -431,11 +444,18 @@ WORD LogDisassembly ( WORD offset, char* text )
         //(LPSTR)GetSymbol(offset,0),       // 
         instruction[inst].mnemonic,         // ORA_
         addresstext, //);                   // ($49,X)
+#ifdef HANDYPSP
+        mA,
+        mX,
+        mY,
+        mSP | 0x100,
+#else
         regs.a,
         regs.x,
         regs.y,
         regs.sp,
-        byte_to_binary(regs.ps)
+#endif
+        psbin
         );
     //if (text)
     //    strcpy(text,fulltext);
@@ -462,9 +482,9 @@ const char* GetSymbol (WORD address, int bytes) {
     return buffer;
 }
 
-const char *byte_to_binary ( unsigned char c )
+const char *byte_to_binary ( unsigned char c, char* b )
 {
-    static char b[9]; // TODO: threadsafe
+    //static char b[9]; // TODO: threadsafe
 
     int i = 0;
     for (unsigned char z = 128; z > 0; z >>= 1) {

@@ -22,6 +22,8 @@
 		EA1F2ED7168F7E56009001EB /* libQtGui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1F2ED5168F7E56009001EB /* libQtGui.a */; };
 		EA1F2ED9168F7E70009001EB /* libquikitlite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1F2ED8168F7E70009001EB /* libquikitlite.a */; };
 		EA1F2EE6168F890C009001EB /* AddonFuncUnt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1F2EE5168F890C009001EB /* AddonFuncUnt.cpp */; };
+		EA662C9A16926A4A00152B91 /* w65c02cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA662C9716926A4900152B91 /* w65c02cpu.cpp */; };
+		EA662C9B16926A4A00152B91 /* w65c02op.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA662C9916926A4A00152B91 /* w65c02op.cpp */; };
 		EA77DB7C168F7194006B1C35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7B168F7194006B1C35 /* UIKit.framework */; };
 		EA77DB7E168F7194006B1C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7D168F7194006B1C35 /* Foundation.framework */; };
 		EA77DB80168F7194006B1C35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7F168F7194006B1C35 /* CoreGraphics.framework */; };
@@ -95,6 +97,10 @@
 		EA1F2EE3168F88F4009001EB /* MyZoomWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyZoomWidget.h; sourceTree = "<group>"; };
 		EA1F2EE4168F88F4009001EB /* NekoDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NekoDriver.h; sourceTree = "<group>"; };
 		EA1F2EE5168F890C009001EB /* AddonFuncUnt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AddonFuncUnt.cpp; sourceTree = "<group>"; };
+		EA662C9616926A4900152B91 /* w65c02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = w65c02.h; path = ANSI/w65c02.h; sourceTree = "<group>"; };
+		EA662C9716926A4900152B91 /* w65c02cpu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = w65c02cpu.cpp; path = ANSI/w65c02cpu.cpp; sourceTree = "<group>"; };
+		EA662C9816926A4900152B91 /* w65c02macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = w65c02macro.h; path = ANSI/w65c02macro.h; sourceTree = "<group>"; };
+		EA662C9916926A4A00152B91 /* w65c02op.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = w65c02op.cpp; path = ANSI/w65c02op.cpp; sourceTree = "<group>"; };
 		EA77DB77168F7194006B1C35 /* Sim800.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sim800.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA77DB7B168F7194006B1C35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA77DB7D168F7194006B1C35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -213,6 +219,10 @@
 		EA1F2EC0168F7B32009001EB /* ANSI */ = {
 			isa = PBXGroup;
 			children = (
+				EA662C9616926A4900152B91 /* w65c02.h */,
+				EA662C9716926A4900152B91 /* w65c02cpu.cpp */,
+				EA662C9816926A4900152B91 /* w65c02macro.h */,
+				EA662C9916926A4A00152B91 /* w65c02op.cpp */,
 				EA1F2EC1168F7B3E009001EB /* 65C02.cpp */,
 				EA1F2EC2168F7B3E009001EB /* 65C02.h */,
 				EA1F2EC3168F7B3E009001EB /* 65C02CPU.c */,
@@ -525,6 +535,8 @@
 				EA95FAD4168FB22C002AB5EA /* moc_MainViewBridge.cpp in Sources */,
 				EA95FAD6168FB236002AB5EA /* qrc_Sim800.cpp in Sources */,
 				EA95FAF9168FCFAE002AB5EA /* AddonFuncUntObjc.mm in Sources */,
+				EA662C9A16926A4A00152B91 /* w65c02cpu.cpp in Sources */,
+				EA662C9B16926A4A00152B91 /* w65c02op.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,7 +758,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					"SHIP_BUILD=1",
-					"QT_NO_DEBUG_OUTPUT=1",
+					QT_NO_DEBUG_OUTPUT,
+					HANDYPSP,
+					FAKEQMI,
+					AUTOTEST,
+					LOGASM,
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;

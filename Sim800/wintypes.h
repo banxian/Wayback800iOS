@@ -21,4 +21,9 @@ typedef DWORD* LPDWORD;
 
 typedef CHAR* LPSTR;
 
+#ifndef TRUE
+#define TRUE true
+#define FALSE false
+#endif
+
 #endif

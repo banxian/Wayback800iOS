@@ -295,15 +295,23 @@ static CALayer* benchlayer;
     // Quick hack
     UIApplication *application = [UIApplication sharedApplication];
     
-    if (!UIInterfaceOrientationIsPortrait(application.statusBarOrientation)) {
-        NSLog(@"Apply dirty fix to get portrait");
-        [application setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
-    //    [self.navigationController.view setTransform:CGAffineTransformMakeRotation(M_PI_2)];
-    //    UIViewController* c = [[UIViewController alloc] init];
-    //    [self presentModalViewController:c animated:NO];
-    //    [self dismissModalViewControllerAnimated:NO];
-    //    c = nil;
-    }
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        // Landscape
+//        if (UIInterfaceOrientationIsPortrait(application.statusBarOrientation)) {
+//            NSLog(@"Apply dirty fix to get landscape");
+//            [application setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft animated:NO];
+//        }
+//    } else {
+        if (!UIInterfaceOrientationIsPortrait(application.statusBarOrientation)) {
+            NSLog(@"Apply dirty fix to get portrait");
+            [application setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
+        //    [self.navigationController.view setTransform:CGAffineTransformMakeRotation(M_PI_2)];
+        //    UIViewController* c = [[UIViewController alloc] init];
+        //    [self presentModalViewController:c animated:NO];
+        //    [self dismissModalViewControllerAnimated:NO];
+        //    c = nil;
+        }
+    //}
     //[[UIDevice currentDevice] performSelector:NSSelectorFromString(@"setOrien") withObject:(id)UIInterfaceOrientationPortrait];
     
     if (stageChecked == false) {
@@ -340,15 +348,23 @@ static CALayer* benchlayer;
                 }
             }
             NSLog(@"final width:%d, height:%d", int(stageSize.width), int(stageSize.height));
-            if (self.view.bounds.size.width > self.view.bounds.size.height) {
-                // real landscape
-                NSLog(@"Fake cordinal");
-                [self.navigationController.view setTransform:CGAffineTransformMakeRotation(M_PI_2)];
-                //UIViewController* c = [[UIViewController alloc] init];
-                //[self presentModalViewController:c animated:NO];
-                //[self dismissModalViewControllerAnimated:NO];
-                //c = nil;
-            }
+//            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//                if (self.view.bounds.size.width < self.view.bounds.size.height) {
+//                    // real portrait
+//                    NSLog(@"Fake cordinal");
+//                    [self.navigationController.view setTransform:CGAffineTransformMakeRotation(M_PI_2)];
+//                }
+//            } else {
+                if (self.view.bounds.size.width > self.view.bounds.size.height) {
+                    // real landscape
+                    NSLog(@"Fake cordinal");
+                    [self.navigationController.view setTransform:CGAffineTransformMakeRotation(M_PI_2)];
+                    //UIViewController* c = [[UIViewController alloc] init];
+                    //[self presentModalViewController:c animated:NO];
+                    //[self dismissModalViewControllerAnimated:NO];
+                    //c = nil;
+                }
+            //}
         }
     }
     if (stageChecked && stageInited == false) {
