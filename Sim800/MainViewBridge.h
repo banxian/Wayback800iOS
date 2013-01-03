@@ -13,7 +13,6 @@
 #include <QtCore/QMimeData>
 #include <QtCore/QDateTime>
 #include <QtGui/QTreeWidgetItem>
-#include "Common.h"
 #include <QtGui/QImage>
 #include "KeyItem.h"
 
@@ -80,13 +79,10 @@ public slots:
     void onEmulationTestClicked();
     
 public slots:
-    //void writeLog(QString content, TLogType logtype = ltMessage);
-    void onStepFinished(quint16 pc);
     void onLCDBufferChanged(QByteArray* buffer);
     
 };
 
-QString LogTypeToString( TLogType logtype );
 QString localLanguage();
 
 #endif

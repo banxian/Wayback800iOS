@@ -134,24 +134,12 @@ void TMainViewBridge::onEmulationRestartClicked()
 void TMainViewBridge::onEmulationTestClicked()
 {
     // TODO: BrowseViewController
-//    QString binname = OpenSaveFileDialog.getOpenFileName(this, tr("Load test binary"), PathSetting.LastSourceFolder, "PC1000 Binary Files (*.bin);;All Files (*.*)", 0, 0);
-//    if (binname.isEmpty()) {
-//        return;
-//    }
-//    PathSetting.LastSourceFolder = QFileInfo(binname).path();
-//    theNekoDriver->RunDemoBin(binname);
-}
-
-void TMainViewBridge::onStepFinished( quint16 pc )
-{
-//    if (action == NULL) {
-//        action = new QLabel(tr("PC:0000"));
-//        action->setMinimumSize(120, 14);
-//        action->setMaximumSize(200, 18);
-//        action->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
-//        ui->statusBar->addWidget(action);
-//    }
-//    //action->setText(QString(tr("PC:%1")).arg(ushort(pc), 4, 16, QLatin1Char('0')));
+    //QString binname = OpenSaveFileDialog.getOpenFileName(this, tr("Load test binary"), PathSetting.LastSourceFolder, "PC1000 Binary Files (*.bin);;All Files (*.*)", 0, 0);
+    //if (binname.isEmpty()) {
+    //    return;
+    //}
+    //PathSetting.LastSourceFolder = QFileInfo(binname).path();
+    //theNekoDriver->RunDemoBin(binname);
 }
 
 extern bool lcdoffshift0flag;
@@ -383,19 +371,19 @@ void TMainViewBridge::initKeypad()
         NULL,       // P06, P10
         NULL,       // P07, P10
         
-        new TKeyItem(0, "Dictionary", Qt::Key_F5),          // P00, P11
-        new TKeyItem(1, "Card", Qt::Key_F6),          // P01, P11
-        new TKeyItem(2, "Calculator", Qt::Key_F7),          // P02, P11
-        new TKeyItem(3, "Reminder", Qt::Key_F8),          // P03, P11
-        new TKeyItem(4, "Data", Qt::Key_F9),          // P04, P11
-        new TKeyItem(5, "Time", Qt::Key_F10),        // P05, P11
-        new TKeyItem(6, "Network", Qt::Key_F11),        // P06, P11
+        new TKeyItem(0, "Dictionary", Qt::Key_F5),  // P00, P11
+        new TKeyItem(1, "Card", Qt::Key_F6),        // P01, P11
+        new TKeyItem(2, "Calculator", Qt::Key_F7),  // P02, P11
+        new TKeyItem(3, "Reminder", Qt::Key_F8),    // P03, P11
+        new TKeyItem(4, "Data", Qt::Key_F9),        // P04, P11
+        new TKeyItem(5, "Time", Qt::Key_F10),       // P05, P11
+        new TKeyItem(6, "Network", Qt::Key_F11),    // P06, P11
         NULL,       // P07, P11
         
         new TKeyItem(50, "Help", Qt::Key_Control),  // P00, P12
         new TKeyItem(51, "Shift", Qt::Key_Shift),   // P01, P12
         new TKeyItem(52, "Caps", Qt::Key_CapsLock), // P02, P12
-        new TKeyItem(53, "Esc", Qt::Key_Escape),     // P03, P12
+        new TKeyItem(53, "Esc", Qt::Key_Escape),    // P03, P12
         new TKeyItem(54, "0", Qt::Key_0),           // P04, P12
         new TKeyItem(55, ".", Qt::Key_Period),      // P05, P12
         new TKeyItem(56, "=", Qt::Key_Equal),       // P06, P12
@@ -433,7 +421,7 @@ void TMainViewBridge::initKeypad()
         new TKeyItem(48, "Up", Qt::Key_Up),         // P02, P16
         new TKeyItem(58, "Down", Qt::Key_Down),     // P03, P16
         new TKeyItem(29, "P", Qt::Key_P),           // P04, P16
-        new TKeyItem(39, "Enter", Qt::Key_Return),   // P05, P16
+        new TKeyItem(39, "Enter", Qt::Key_Return),  // P05, P16
         new TKeyItem(49, "PgDn", Qt::Key_PageDown), // P06, P16
         new TKeyItem(59, "Right", Qt::Key_Right),   // P07, P16
         
@@ -849,26 +837,6 @@ void TMainViewBridge::initLcdStripe()
     fLCDStripes[71].bitmap = HonzBar;
     fLCDStripes[71].left = 41;
     fLCDStripes[71].top = 310;
-}
-
-QString LogTypeToString( TLogType logtype )
-{
-    switch (logtype)
-    {
-        case ltHint:
-            return "Hint";
-            break;
-        case ltDebug:
-            return "Debug";
-            break;
-        case ltMessage:
-            return "Message";
-            break;
-        case ltError:
-            return "Error";
-            break;
-    }
-    return "Unknown";
 }
 
 QString localLanguage() {

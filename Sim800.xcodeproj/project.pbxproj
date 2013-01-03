@@ -91,7 +91,6 @@
 		EA1F2EDA168F8469009001EB /* wintypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
 		EA1F2EDE168F88F4009001EB /* AddonFuncUnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddonFuncUnt.h; sourceTree = "<group>"; };
 		EA1F2EDF168F88F4009001EB /* CC800IOName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC800IOName.h; sourceTree = "<group>"; };
-		EA1F2EE0168F88F4009001EB /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		EA1F2EE1168F88F4009001EB /* DbCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbCentre.h; sourceTree = "<group>"; };
 		EA1F2EE2168F88F4009001EB /* DirtyDefination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirtyDefination.h; sourceTree = "<group>"; };
 		EA1F2EE3168F88F4009001EB /* MyZoomWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyZoomWidget.h; sourceTree = "<group>"; };
@@ -245,7 +244,6 @@
 				EA95FAF7168FCFAE002AB5EA /* AddonFuncUntObjc.h */,
 				EA1F2EDE168F88F4009001EB /* AddonFuncUnt.h */,
 				EA1F2EDF168F88F4009001EB /* CC800IOName.h */,
-				EA1F2EE0168F88F4009001EB /* Common.h */,
 				EA1F2EE1168F88F4009001EB /* DbCentre.h */,
 				EA1F2EE2168F88F4009001EB /* DirtyDefination.h */,
 				EA1F2EE3168F88F4009001EB /* MyZoomWidget.h */,
@@ -760,9 +758,9 @@
 					"SHIP_BUILD=1",
 					QT_NO_DEBUG_OUTPUT,
 					HANDYPSP,
-					FAKEQMI,
-					AUTOTEST,
-					LOGASM,
+					FAKENMI,
+					_AUTOTEST,
+					_LOGASM,
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
