@@ -36,6 +36,7 @@
 		EA77DB9F168F7194006B1C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77DB7D168F7194006B1C35 /* Foundation.framework */; };
 		EA77DBA7168F7194006B1C35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA77DBA5168F7194006B1C35 /* InfoPlist.strings */; };
 		EA77DBAA168F7194006B1C35 /* Sim800Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77DBA9168F7194006B1C35 /* Sim800Tests.m */; };
+		EA7A603B203C3C8400D6FF49 /* brom.bin in Resources */ = {isa = PBXBuildFile; fileRef = EA7A603A203C3C8400D6FF49 /* brom.bin */; };
 		EA95FAC1168F9610002AB5EA /* NekoDriverMem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA95FAC0168F9610002AB5EA /* NekoDriverMem.cpp */; };
 		EA95FAC4168F9951002AB5EA /* MainViewBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA95FAC3168F9951002AB5EA /* MainViewBridge.mm */; };
 		EA95FAC7168FA3E5002AB5EA /* KeyItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA95FAC5168FA3E4002AB5EA /* KeyItem.cpp */; };
@@ -57,7 +58,6 @@
 		EA95FAE9168FB6AD002AB5EA /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = EA95FAE0168FB6AD002AB5EA /* iTunesArtwork */; };
 		EA95FAEE168FB7D9002AB5EA /* cc800.fls in Resources */ = {isa = PBXBuildFile; fileRef = EA95FAEB168FB7D9002AB5EA /* cc800.fls */; };
 		EA95FAEF168FB7D9002AB5EA /* ConfMachine.ini in Resources */ = {isa = PBXBuildFile; fileRef = EA95FAEC168FB7D9002AB5EA /* ConfMachine.ini */; };
-		EA95FAF0168FB7D9002AB5EA /* obj.bin in Resources */ = {isa = PBXBuildFile; fileRef = EA95FAED168FB7D9002AB5EA /* obj.bin */; };
 		EA95FAF3168FBBEE002AB5EA /* Apollo-nagato-avatar-15-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EA95FAF2168FBBEE002AB5EA /* Apollo-nagato-avatar-15-3.jpg */; };
 		EA95FAF9168FCFAE002AB5EA /* AddonFuncUntObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA95FAF8168FCFAE002AB5EA /* AddonFuncUntObjc.mm */; };
 /* End PBXBuildFile section */
@@ -73,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA1BBFD4203C483900534BAA /* NekoDriverIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NekoDriverIO.h; sourceTree = "<group>"; };
 		EA1F2EB7168F7244009001EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPad.xib; sourceTree = "<group>"; };
 		EA1F2EB9168F7244009001EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController_iPhone.xib; sourceTree = "<group>"; };
 		EA1F2EC1168F7B3E009001EB /* 65C02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = 65C02.cpp; path = ANSI/65C02.cpp; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		EA77DBA6168F7194006B1C35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA77DBA8168F7194006B1C35 /* Sim800Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sim800Tests.h; sourceTree = "<group>"; };
 		EA77DBA9168F7194006B1C35 /* Sim800Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sim800Tests.m; sourceTree = "<group>"; };
+		EA7A603A203C3C8400D6FF49 /* brom.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = brom.bin; path = Resources/ROMs/brom.bin; sourceTree = "<group>"; };
 		EA95FAC0168F9610002AB5EA /* NekoDriverMem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NekoDriverMem.cpp; sourceTree = "<group>"; };
 		EA95FAC2168F992B002AB5EA /* MainViewBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewBridge.h; sourceTree = "<group>"; };
 		EA95FAC3168F9951002AB5EA /* MainViewBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewBridge.mm; sourceTree = "<group>"; };
@@ -141,7 +143,6 @@
 		EA95FAE0168FB6AD002AB5EA /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
 		EA95FAEB168FB7D9002AB5EA /* cc800.fls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cc800.fls; path = Resources/ROMs/cc800.fls; sourceTree = "<group>"; };
 		EA95FAEC168FB7D9002AB5EA /* ConfMachine.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ConfMachine.ini; path = Resources/ROMs/ConfMachine.ini; sourceTree = "<group>"; };
-		EA95FAED168FB7D9002AB5EA /* obj.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = obj.bin; path = Resources/ROMs/obj.bin; sourceTree = "<group>"; };
 		EA95FAF2168FBBEE002AB5EA /* Apollo-nagato-avatar-15-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Apollo-nagato-avatar-15-3.jpg"; path = "Resources/Images/Apollo-nagato-avatar-15-3.jpg"; sourceTree = "<group>"; };
 		EA95FAF7168FCFAE002AB5EA /* AddonFuncUntObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddonFuncUntObjc.h; sourceTree = "<group>"; };
 		EA95FAF8168FCFAE002AB5EA /* AddonFuncUntObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AddonFuncUntObjc.mm; sourceTree = "<group>"; };
@@ -248,6 +249,7 @@
 				EA1F2EE2168F88F4009001EB /* DirtyDefination.h */,
 				EA1F2EE3168F88F4009001EB /* MyZoomWidget.h */,
 				EA1F2EE4168F88F4009001EB /* NekoDriver.h */,
+				EA1BBFD4203C483900534BAA /* NekoDriverIO.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
@@ -380,9 +382,9 @@
 		EA95FAEA168FB7BF002AB5EA /* ROMs */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A603A203C3C8400D6FF49 /* brom.bin */,
 				EA95FAEB168FB7D9002AB5EA /* cc800.fls */,
 				EA95FAEC168FB7D9002AB5EA /* ConfMachine.ini */,
-				EA95FAED168FB7D9002AB5EA /* obj.bin */,
 			);
 			name = ROMs;
 			sourceTree = "<group>";
@@ -480,8 +482,8 @@
 				EA95FAE9168FB6AD002AB5EA /* iTunesArtwork in Resources */,
 				EA95FAEE168FB7D9002AB5EA /* cc800.fls in Resources */,
 				EA95FAEF168FB7D9002AB5EA /* ConfMachine.ini in Resources */,
-				EA95FAF0168FB7D9002AB5EA /* obj.bin in Resources */,
 				EA95FAF3168FBBEE002AB5EA /* Apollo-nagato-avatar-15-3.jpg in Resources */,
+				EA7A603B203C3C8400D6FF49 /* brom.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +602,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -607,6 +610,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
+					HANDYPSP,
+					FAKENMI,
+					_AUTOTEST,
+					_LOGASM,
+					USE_BUSROM,
+					_MERGEGGVSIM,
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -629,8 +638,11 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "~/CompileFarm/qt/qt-ios-sim-4.8.1-clang-static/lib";
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -642,10 +654,21 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					QT_NO_DEBUG_OUTPUT,
+					HANDYPSP,
+					FAKENMI,
+					_AUTOTEST,
+					_LOGASM,
+					USE_BUSROM,
+					_MERGEGGVSIM,
+					"$(inherited)",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -665,10 +688,13 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "~/CompileFarm/qt/qt-ios-4.8.1-clang-static/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
@@ -750,6 +776,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -761,6 +788,9 @@
 					FAKENMI,
 					_AUTOTEST,
 					_LOGASM,
+					USE_BUSROM,
+					_MERGEGGVSIM,
+					"$(inherited)",
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -781,10 +811,13 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "~/CompileFarm/qt/qt-ios-4.8.1-clang-static/lib";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Shipping;
 		};

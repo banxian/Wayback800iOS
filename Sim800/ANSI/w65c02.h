@@ -29,15 +29,20 @@ extern iofunction1 ioread[0x40];
 extern iofunction2 iowrite[0x40];
 extern void checkflashprogram(WORD addr, BYTE data);
 
-extern unsigned char fixedram0000[0x10002]; // just like simulator
+extern unsigned char fixedram0000[0x10002]; // just like simulator, 64k+2
 extern unsigned char* pmemmap[8]; // 0000~1FFF ... E000~FFFF
 extern unsigned char* may4000ptr; // TODO: move into NekoDriver.h
 extern unsigned char* norbankheader[0x10];
 extern unsigned char* volume0array[0x100];
 extern unsigned char* volume1array[0x100];
+#ifdef USE_BUSROM
+extern unsigned char* volume2array[0x100];
+extern unsigned char* volume3array[0x100];
+#endif
 extern unsigned char* bbsbankheader[0x10];
+extern unsigned char* zp40ptr;  // used in io_zp_bsw
 
-extern WORD       iorange;
+#define iorange 0x40
 extern regsrec    regs;
 extern BOOL       restart;
 extern BOOL       g_irq;    // FIXME: NO MORE REVERSE
@@ -112,16 +117,19 @@ unsigned short GetWord(unsigned short address);
 //#define CPU_POKE(m1,m2)         {if(m1<0xfc00) mRamPointer[m1]=m2; else mSystem.Poke_CPU(m1,m2);}
 
 // Don't use ++/-- in addr, or will be execute multi time
-#define CPU_PEEK(addr)      ((addr < iorange)                           \
-                            ? ioread[addr & 0xFF]((BYTE)(addr & 0xff))  \
-                            : *(pmemmap[unsigned(addr) >> 0xD] + (addr & 0x1FFF)))
+// TODO: should place io operation in first case to prefer io speed (side effect: slown down other normal memory access)
+#define CPU_PEEK(addr)      ((addr >= 0x80) \
+                            ? *(pmemmap[unsigned(addr) >> 0xD] + (addr & 0x1FFF))\
+                            : (addr >= iorange?zp40ptr[addr-0x40]:ioread[addr & 0xFF]((BYTE)(addr & 0xff))) )
 #define CPU_PEEKW(addr)     (CPU_PEEK((addr)) + (CPU_PEEK((addr + 1)) << 8))
-#define CPU_POKE(addr, a)   { if ((addr >= iorange)) { \
-                                if ((addr < 0x4000)) { \
+#define CPU_POKE(addr, a)   { if ((addr >= 0x80)) { \
+                                if (addr < 0x4000) { \
                                   *(pmemmap[unsigned(addr) >> 0xD] + (addr & 0x1FFF)) = (BYTE)(a); \
                                 } else { \
                                     checkflashprogram(addr, (BYTE)(a)); \
                                 } \
+                              } else if ((addr >= iorange)) { \
+                                zp40ptr[addr-0x40] = (BYTE)(a); \
                               }  else { \
                                 iowrite[addr & 0xFF]((BYTE)(addr & 0xff),(BYTE)(a)); \
                               } \

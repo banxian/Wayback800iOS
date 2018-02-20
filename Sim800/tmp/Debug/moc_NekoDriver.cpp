@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'NekoDriver.h'
 **
-** Created: Sun Dec 30 07:18:44 2012
+** Created: Tue Feb 20 16:29:14 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,29 +23,25 @@ static const uint qt_meta_data_TNekoDriver[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       1,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       20,   13,   12,   12, 0x05,
-      53,   50,   12,   12, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      75,   13,   12,   12, 0x0a,
-     107,   50,   12,   12, 0x0a,
+      50,   13,   12,   12, 0x0a,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_TNekoDriver[] = {
     "TNekoDriver\0\0buffer\0lcdBufferChanged(QByteArray*)\0"
-    "pc\0stepFinished(quint16)\0"
     "onLCDBufferChanged(QByteArray*)\0"
-    "onStepFinished(quint16)\0"
 };
 
 void TNekoDriver::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -55,9 +51,7 @@ void TNekoDriver::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         TNekoDriver *_t = static_cast<TNekoDriver *>(_o);
         switch (_id) {
         case 0: _t->lcdBufferChanged((*reinterpret_cast< QByteArray*(*)>(_a[1]))); break;
-        case 1: _t->stepFinished((*reinterpret_cast< quint16(*)>(_a[1]))); break;
-        case 2: _t->onLCDBufferChanged((*reinterpret_cast< QByteArray*(*)>(_a[1]))); break;
-        case 3: _t->onStepFinished((*reinterpret_cast< quint16(*)>(_a[1]))); break;
+        case 1: _t->onLCDBufferChanged((*reinterpret_cast< QByteArray*(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -95,9 +89,9 @@ int TNekoDriver::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 2;
     }
     return _id;
 }
@@ -108,37 +102,28 @@ void TNekoDriver::lcdBufferChanged(QByteArray * _t1)
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
-
-// SIGNAL 1
-void TNekoDriver::stepFinished(quint16 _t1)
-{
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
-}
 static const uint qt_meta_data_EmulatorThread[] = {
 
  // content:
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       1,       // signalCount
 
  // signals: signature, parameters, type, tag, flags
       23,   16,   15,   15, 0x05,
-      56,   53,   15,   15, 0x05,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_EmulatorThread[] = {
     "EmulatorThread\0\0buffer\0"
-    "lcdBufferChanged(QByteArray*)\0pc\0"
-    "stepFinished(quint16)\0"
+    "lcdBufferChanged(QByteArray*)\0"
 };
 
 void EmulatorThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -148,7 +133,6 @@ void EmulatorThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         EmulatorThread *_t = static_cast<EmulatorThread *>(_o);
         switch (_id) {
         case 0: _t->lcdBufferChanged((*reinterpret_cast< QByteArray*(*)>(_a[1]))); break;
-        case 1: _t->stepFinished((*reinterpret_cast< quint16(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -186,9 +170,9 @@ int EmulatorThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }
@@ -198,12 +182,5 @@ void EmulatorThread::lcdBufferChanged(QByteArray * _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
-}
-
-// SIGNAL 1
-void EmulatorThread::stepFinished(quint16 _t1)
-{
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_END_MOC_NAMESPACE

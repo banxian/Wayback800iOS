@@ -29,7 +29,7 @@
                    regs.sp = 0x1FF;
 #define READ     ((addr < iorange)                                          \
                     ? ioread[addr & 0xFF]((BYTE)(addr & 0xff))            \
-                    : *(pmemmap[addr >> 0xD] + (addr & 0x1FFF)))
+                    : (addr < 0x80?zp40ptr[addr-0x40]:*(pmemmap[addr >> 0xD] + (addr & 0x1FFF))))
 #define SETNZ(a) {                                                          \
                    flagn = ((a) & 0x80);                                    \
                    flagz = !(a & 0xFF);                                     \
@@ -39,7 +39,9 @@
 #define TOBIN(a) (((a) >> 4)*10 + ((a) & 0x0F))
 // Check flash
 #define WRITE(a) { if ((addr >= iorange)) { \
-                     if ((addr < 0x4000)) { \
+                     if (addr < 0x80) { \
+                       zp40ptr[addr-0x40]=(BYTE)(a);\
+                     } else if ((addr < 0x4000)) { \
                        *(pmemmap[addr >> 0xD] + (addr & 0x1FFF)) = (BYTE)(a); \
                      } else { \
                        checkflashprogram(addr, (BYTE)(a)); \

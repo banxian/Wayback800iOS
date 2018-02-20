@@ -324,7 +324,7 @@ void TMainViewBridge::repaintKeypad()
     [(__bridge id)fParent replaceImage2:&fStageProxy];
 }
 
-extern void CheckLCDOffShift0AndEnableWatchDog();
+extern void CheckSleepFlagAndForceWakeup();
 extern void AppendLog(const char* text);
 
 void TMainViewBridge::updateKeypadMatrix()
@@ -338,7 +338,7 @@ void TMainViewBridge::updateKeypadMatrix()
         }
     }
     // TODO: Check
-    CheckLCDOffShift0AndEnableWatchDog();
+    CheckSleepFlagAndForceWakeup();
     //AppendLog("keypadmatrix updated.");
 }
 
@@ -362,28 +362,28 @@ void TMainViewBridge::onKeypadSizeChanged(int w, int h)
 void TMainViewBridge::initKeypad()
 {
     TKeyItem* item[8][8] = {
-        NULL,       // P00, P10
-        NULL,       // P01, P10
-        new TKeyItem(18, "ON/OFF", Qt::Key_F12),        // P02, P10
-        NULL,       // P03, P10
-        NULL,       // P04, P10
-        NULL,       // P05, P10
-        NULL,       // P06, P10
-        NULL,       // P07, P10
+        NULL,       // P10, P30
+        NULL,       // P11, P30
+        new TKeyItem(18, "ON/OFF", Qt::Key_F12),        // GND, P30
+        NULL,       // P??, P30
+        NULL,       // P??, P30
+        NULL,       // P??, P30
+        NULL,       // P??, P30
+        NULL,       // P??, P30
         
-        new TKeyItem(0, "Dictionary", Qt::Key_F5),  // P00, P11
-        new TKeyItem(1, "Card", Qt::Key_F6),        // P01, P11
-        new TKeyItem(2, "Calculator", Qt::Key_F7),  // P02, P11
-        new TKeyItem(3, "Reminder", Qt::Key_F8),    // P03, P11
-        new TKeyItem(4, "Data", Qt::Key_F9),        // P04, P11
-        new TKeyItem(5, "Time", Qt::Key_F10),       // P05, P11
-        new TKeyItem(6, "Network", Qt::Key_F11),    // P06, P11
-        NULL,       // P07, P11
+        new TKeyItem(0, "Dictionary", Qt::Key_F5),          // P00, P30
+        new TKeyItem(1, "Card", Qt::Key_F6),          // P01, P30
+        new TKeyItem(2, "Calculator", Qt::Key_F7),          // P02, P30
+        new TKeyItem(3, "Reminder", Qt::Key_F8),          // P03, P30
+        new TKeyItem(4, "Data", Qt::Key_F9),          // P04, P30
+        new TKeyItem(5, "Time", Qt::Key_F10),        // P05, P30
+        new TKeyItem(6, "Network", Qt::Key_F11),        // P06, P30
+        NULL,       // P07, P30
         
         new TKeyItem(50, "Help", Qt::Key_Control),  // P00, P12
         new TKeyItem(51, "Shift", Qt::Key_Shift),   // P01, P12
         new TKeyItem(52, "Caps", Qt::Key_CapsLock), // P02, P12
-        new TKeyItem(53, "Esc", Qt::Key_Escape),    // P03, P12
+        new TKeyItem(53, "Esc", Qt::Key_Escape),     // P03, P12
         new TKeyItem(54, "0", Qt::Key_0),           // P04, P12
         new TKeyItem(55, ".", Qt::Key_Period),      // P05, P12
         new TKeyItem(56, "=", Qt::Key_Equal),       // P06, P12
@@ -421,7 +421,7 @@ void TMainViewBridge::initKeypad()
         new TKeyItem(48, "Up", Qt::Key_Up),         // P02, P16
         new TKeyItem(58, "Down", Qt::Key_Down),     // P03, P16
         new TKeyItem(29, "P", Qt::Key_P),           // P04, P16
-        new TKeyItem(39, "Enter", Qt::Key_Return),  // P05, P16
+        new TKeyItem(39, "Enter", Qt::Key_Return),   // P05, P16
         new TKeyItem(49, "PgDn", Qt::Key_PageDown), // P06, P16
         new TKeyItem(59, "Right", Qt::Key_Right),   // P07, P16
         

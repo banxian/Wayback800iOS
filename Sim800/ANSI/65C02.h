@@ -71,8 +71,9 @@ extern unsigned char* norbankheader[0x10];
 extern unsigned char* volume0array[0x100];
 extern unsigned char* volume1array[0x100];
 extern unsigned char* bbsbankheader[0x10];
+extern unsigned char* zp40ptr;  // used in io_zp_bsw
 
-extern WORD       iorange;
+#define iorange 0x40
 extern regsrec    regs;
 extern BOOL       restart;
 extern BOOL       g_irq;    // FIXME: NO MORE REVERSE

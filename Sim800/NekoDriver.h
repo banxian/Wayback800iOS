@@ -95,6 +95,7 @@ extern unsigned short lcdbuffaddr; // unused
 extern unsigned keypadmatrix[8][8]; // char -> uint32
 
 #define TF_STACKOVERFLOW 0x1
+#define TF_TIMER1_STOPED 0x2
 #define TF_NMIFLAG 0x8
 #define TF_IRQFLAG 0x10
 #define TF_WATCHDOG 0x80

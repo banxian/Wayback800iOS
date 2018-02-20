@@ -7,7 +7,7 @@ extern "C" {
 
 DWORD     autoboot          = 0;
 BOOL      restart           = 0;
-WORD      iorange           = 0x0040;
+//WORD      iorange           = 0x0040;
 
 BOOL      g_irq             = 0;    // FIXME: NO MORE REVERSE
 BOOL      g_nmi             = 0;    // FIXME: NO MORE REVERSE
