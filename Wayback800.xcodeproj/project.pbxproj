@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA1CD57020FC7DD2002F91C0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD56F20FC7DD2002F91C0 /* Launch Screen.storyboard */; };
+		EA1CD57F20FE494A002F91C0 /* numbertest.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD57E20FE494A002F91C0 /* numbertest.png */; };
+		EA1CD59820FFAB03002F91C0 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD59720FFAB03002F91C0 /* particle.png */; };
+		EA1CD59E20FFBE05002F91C0 /* MyGLKLCDView6.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD59D20FFBE05002F91C0 /* MyGLKLCDView6.mm */; };
+		EA1CD5A020FFDA06002F91C0 /* lcdstripe_slice_w562.json in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD59F20FFDA06002F91C0 /* lcdstripe_slice_w562.json */; };
+		EA1CD5CD21021F67002F91C0 /* 65C02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5C621021F67002F91C0 /* 65C02.cpp */; };
+		EA1CD5CE21021F67002F91C0 /* 65C02CPU.c in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5C821021F67002F91C0 /* 65C02CPU.c */; };
+		EA1CD5CF21021F67002F91C0 /* w65c02cpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5CA21021F67002F91C0 /* w65c02cpu.cpp */; };
+		EA1CD5D021021F67002F91C0 /* w65c02op.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5CC21021F67002F91C0 /* w65c02op.cpp */; };
+		EA1CD5DF21022166002F91C0 /* AddonFuncUnt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5D821022166002F91C0 /* AddonFuncUnt.cpp */; };
+		EA1CD5E021022166002F91C0 /* AddonFuncUntObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5D921022166002F91C0 /* AddonFuncUntObjc.mm */; };
+		EA1CD5E121022166002F91C0 /* DbCentre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5DA21022166002F91C0 /* DbCentre.cpp */; };
+		EA1CD5E221022166002F91C0 /* NekoDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5DB21022166002F91C0 /* NekoDriver.cpp */; };
+		EA1CD5E321022166002F91C0 /* NekoDriverDebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5DC21022166002F91C0 /* NekoDriverDebug.cpp */; };
+		EA1CD5E421022166002F91C0 /* NekoDriverIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5DD21022166002F91C0 /* NekoDriverIO.cpp */; };
+		EA1CD5E521022166002F91C0 /* NekoDriverMem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5DE21022166002F91C0 /* NekoDriverMem.cpp */; };
+		EA1CD5E921025948002F91C0 /* brom.bin in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD5E721025948002F91C0 /* brom.bin */; };
+		EA1CD5EA21025948002F91C0 /* cc800.fls in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD5E821025948002F91C0 /* cc800.fls */; };
+		EA961FAF20F2F9E100A7185B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FAE20F2F9E100A7185B /* Foundation.framework */; };
+		EA961FB120F2F9E100A7185B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FB020F2F9E100A7185B /* CoreGraphics.framework */; };
+		EA961FB320F2F9E100A7185B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FB220F2F9E100A7185B /* UIKit.framework */; };
+		EA961FB920F2F9E100A7185B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA961FB720F2F9E100A7185B /* InfoPlist.strings */; };
+		EA961FBB20F2F9E100A7185B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA961FBA20F2F9E100A7185B /* main.m */; };
+		EA961FBF20F2F9E100A7185B /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA961FBE20F2F9E100A7185B /* AppDelegate.mm */; };
+		EA961FC120F2F9E100A7185B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA961FC020F2F9E100A7185B /* Images.xcassets */; };
+		EA961FC820F2F9E100A7185B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FC720F2F9E100A7185B /* XCTest.framework */; };
+		EA961FC920F2F9E100A7185B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FAE20F2F9E100A7185B /* Foundation.framework */; };
+		EA961FCA20F2F9E100A7185B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FB220F2F9E100A7185B /* UIKit.framework */; };
+		EA961FD220F2F9E100A7185B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA961FD020F2F9E100A7185B /* InfoPlist.strings */; };
+		EA961FD420F2F9E100A7185B /* Wayback800Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA961FD320F2F9E100A7185B /* Wayback800Tests.m */; };
+		EA961FE020F32E4000A7185B /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA961FDF20F32E4000A7185B /* MainViewController.mm */; };
+		EA961FE320F3AE8900A7185B /* KeyItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA961FE120F3AE8900A7185B /* KeyItem.cpp */; };
+		EA961FE820F7412700A7185B /* MyRectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA961FE720F7412700A7185B /* MyRectButton.m */; };
+		EA961FEF20FA1D7D00A7185B /* CheatTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA961FED20FA1D7D00A7185B /* CheatTypes.cpp */; };
+		EA961FF720FB4E5D00A7185B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FF620FB4E5D00A7185B /* QuartzCore.framework */; };
+		EA961FF920FB4E6500A7185B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FF820FB4E6500A7185B /* OpenGLES.framework */; };
+		EA961FFB20FB4E6B00A7185B /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FFA20FB4E6B00A7185B /* GLKit.framework */; };
+		EACE6B78210288AC00F76D67 /* lcdstripe_slice_w938.json in Resources */ = {isa = PBXBuildFile; fileRef = EACE6B77210288AC00F76D67 /* lcdstripe_slice_w938.json */; };
+		EACE6B7B21037AD200F76D67 /* GLHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = EACE6B7A21037AD200F76D67 /* GLHelper.mm */; };
+		EACE6B7E2105231900F76D67 /* lcdstripe_slice_w1313.json in Resources */ = {isa = PBXBuildFile; fileRef = EACE6B7D2105231900F76D67 /* lcdstripe_slice_w1313.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA961FCB20F2F9E100A7185B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA961FA320F2F9E100A7185B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA961FAA20F2F9E100A7185B;
+			remoteInfo = Wayback800;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EACE6B7921028A6E00F76D67 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA1CD56F20FC7DD2002F91C0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		EA1CD57E20FE494A002F91C0 /* numbertest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numbertest.png; sourceTree = "<group>"; };
+		EA1CD59720FFAB03002F91C0 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
+		EA1CD59C20FFBE05002F91C0 /* MyGLKLCDView6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGLKLCDView6.h; sourceTree = "<group>"; };
+		EA1CD59D20FFBE05002F91C0 /* MyGLKLCDView6.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyGLKLCDView6.mm; sourceTree = "<group>"; };
+		EA1CD59F20FFDA06002F91C0 /* lcdstripe_slice_w562.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lcdstripe_slice_w562.json; sourceTree = "<group>"; };
+		EA1CD5C621021F67002F91C0 /* 65C02.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 65C02.cpp; sourceTree = "<group>"; };
+		EA1CD5C721021F67002F91C0 /* 65C02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 65C02.h; sourceTree = "<group>"; };
+		EA1CD5C821021F67002F91C0 /* 65C02CPU.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 65C02CPU.c; sourceTree = "<group>"; };
+		EA1CD5C921021F67002F91C0 /* w65c02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = w65c02.h; sourceTree = "<group>"; };
+		EA1CD5CA21021F67002F91C0 /* w65c02cpu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = w65c02cpu.cpp; sourceTree = "<group>"; };
+		EA1CD5CB21021F67002F91C0 /* w65c02macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = w65c02macro.h; sourceTree = "<group>"; };
+		EA1CD5CC21021F67002F91C0 /* w65c02op.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = w65c02op.cpp; sourceTree = "<group>"; };
+		EA1CD5D12102202B002F91C0 /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
+		EA1CD5D221022152002F91C0 /* AddonFuncUntObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddonFuncUntObjc.h; sourceTree = "<group>"; };
+		EA1CD5D321022152002F91C0 /* CC800IOName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC800IOName.h; sourceTree = "<group>"; };
+		EA1CD5D421022152002F91C0 /* DbCentre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbCentre.h; sourceTree = "<group>"; };
+		EA1CD5D521022152002F91C0 /* DirtyDefination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirtyDefination.h; sourceTree = "<group>"; };
+		EA1CD5D621022152002F91C0 /* NekoDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NekoDriver.h; sourceTree = "<group>"; };
+		EA1CD5D721022152002F91C0 /* NekoDriverIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NekoDriverIO.h; sourceTree = "<group>"; };
+		EA1CD5D821022166002F91C0 /* AddonFuncUnt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AddonFuncUnt.cpp; sourceTree = "<group>"; };
+		EA1CD5D921022166002F91C0 /* AddonFuncUntObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AddonFuncUntObjc.mm; sourceTree = "<group>"; };
+		EA1CD5DA21022166002F91C0 /* DbCentre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DbCentre.cpp; sourceTree = "<group>"; };
+		EA1CD5DB21022166002F91C0 /* NekoDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NekoDriver.cpp; sourceTree = "<group>"; };
+		EA1CD5DC21022166002F91C0 /* NekoDriverDebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NekoDriverDebug.cpp; sourceTree = "<group>"; };
+		EA1CD5DD21022166002F91C0 /* NekoDriverIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NekoDriverIO.cpp; sourceTree = "<group>"; };
+		EA1CD5DE21022166002F91C0 /* NekoDriverMem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NekoDriverMem.cpp; sourceTree = "<group>"; };
+		EA1CD5E621022176002F91C0 /* AddonFuncUnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddonFuncUnt.h; sourceTree = "<group>"; };
+		EA1CD5E721025948002F91C0 /* brom.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = brom.bin; sourceTree = "<group>"; };
+		EA1CD5E821025948002F91C0 /* cc800.fls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cc800.fls; sourceTree = "<group>"; };
+		EA961FAB20F2F9E100A7185B /* Wayback800.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wayback800.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA961FAE20F2F9E100A7185B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA961FB020F2F9E100A7185B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA961FB220F2F9E100A7185B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA961FB620F2F9E100A7185B /* Wayback800-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wayback800-Info.plist"; sourceTree = "<group>"; };
+		EA961FB820F2F9E100A7185B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA961FBA20F2F9E100A7185B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA961FBC20F2F9E100A7185B /* Wayback800-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wayback800-Prefix.pch"; sourceTree = "<group>"; };
+		EA961FBD20F2F9E100A7185B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA961FBE20F2F9E100A7185B /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		EA961FC020F2F9E100A7185B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA961FC620F2F9E100A7185B /* Wayback800Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wayback800Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA961FC720F2F9E100A7185B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EA961FCF20F2F9E100A7185B /* Wayback800Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Wayback800Tests-Info.plist"; sourceTree = "<group>"; };
+		EA961FD120F2F9E100A7185B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA961FD320F2F9E100A7185B /* Wayback800Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Wayback800Tests.m; sourceTree = "<group>"; };
+		EA961FDE20F32E4000A7185B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EA961FDF20F32E4000A7185B /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		EA961FE120F3AE8900A7185B /* KeyItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyItem.cpp; sourceTree = "<group>"; };
+		EA961FE220F3AE8900A7185B /* KeyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyItem.h; sourceTree = "<group>"; };
+		EA961FE620F7412700A7185B /* MyRectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRectButton.h; sourceTree = "<group>"; };
+		EA961FE720F7412700A7185B /* MyRectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRectButton.m; sourceTree = "<group>"; };
+		EA961FED20FA1D7D00A7185B /* CheatTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CheatTypes.cpp; sourceTree = "<group>"; };
+		EA961FEE20FA1D7D00A7185B /* CheatTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheatTypes.h; sourceTree = "<group>"; };
+		EA961FF620FB4E5D00A7185B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EA961FF820FB4E6500A7185B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EA961FFA20FB4E6B00A7185B /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		EACE6B77210288AC00F76D67 /* lcdstripe_slice_w938.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lcdstripe_slice_w938.json; sourceTree = "<group>"; };
+		EACE6B7A21037AD200F76D67 /* GLHelper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLHelper.mm; sourceTree = "<group>"; };
+		EACE6B7C21037AE200F76D67 /* GLHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLHelper.h; sourceTree = "<group>"; };
+		EACE6B7D2105231900F76D67 /* lcdstripe_slice_w1313.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lcdstripe_slice_w1313.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA961FA820F2F9E100A7185B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA961FFB20FB4E6B00A7185B /* GLKit.framework in Frameworks */,
+				EA961FF920FB4E6500A7185B /* OpenGLES.framework in Frameworks */,
+				EA961FF720FB4E5D00A7185B /* QuartzCore.framework in Frameworks */,
+				EA961FB120F2F9E100A7185B /* CoreGraphics.framework in Frameworks */,
+				EA961FB320F2F9E100A7185B /* UIKit.framework in Frameworks */,
+				EA961FAF20F2F9E100A7185B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA961FC320F2F9E100A7185B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA961FC820F2F9E100A7185B /* XCTest.framework in Frameworks */,
+				EA961FCA20F2F9E100A7185B /* UIKit.framework in Frameworks */,
+				EA961FC920F2F9E100A7185B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA1CD5C121020237002F91C0 /* ROMs */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5E721025948002F91C0 /* brom.bin */,
+				EA1CD5E821025948002F91C0 /* cc800.fls */,
+			);
+			path = ROMs;
+			sourceTree = "<group>";
+		};
+		EA1CD5C2210203C1002F91C0 /* Visual Studio */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5D12102202B002F91C0 /* wintypes.h */,
+				EA1CD5C321021F1E002F91C0 /* ANSI */,
+				EA1CD5C421021F27002F91C0 /* Header Files */,
+				EA1CD5C521021F34002F91C0 /* Source Files */,
+			);
+			name = "Visual Studio";
+			sourceTree = "<group>";
+		};
+		EA1CD5C321021F1E002F91C0 /* ANSI */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5C921021F67002F91C0 /* w65c02.h */,
+				EA1CD5CA21021F67002F91C0 /* w65c02cpu.cpp */,
+				EA1CD5CB21021F67002F91C0 /* w65c02macro.h */,
+				EA1CD5CC21021F67002F91C0 /* w65c02op.cpp */,
+				EA1CD5C621021F67002F91C0 /* 65C02.cpp */,
+				EA1CD5C721021F67002F91C0 /* 65C02.h */,
+				EA1CD5C821021F67002F91C0 /* 65C02CPU.c */,
+			);
+			path = ANSI;
+			sourceTree = "<group>";
+		};
+		EA1CD5C421021F27002F91C0 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5E621022176002F91C0 /* AddonFuncUnt.h */,
+				EA1CD5D221022152002F91C0 /* AddonFuncUntObjc.h */,
+				EA1CD5D321022152002F91C0 /* CC800IOName.h */,
+				EA1CD5D421022152002F91C0 /* DbCentre.h */,
+				EA1CD5D521022152002F91C0 /* DirtyDefination.h */,
+				EA1CD5D621022152002F91C0 /* NekoDriver.h */,
+				EA1CD5D721022152002F91C0 /* NekoDriverIO.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		EA1CD5C521021F34002F91C0 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5D821022166002F91C0 /* AddonFuncUnt.cpp */,
+				EA1CD5D921022166002F91C0 /* AddonFuncUntObjc.mm */,
+				EA1CD5DA21022166002F91C0 /* DbCentre.cpp */,
+				EA1CD5DB21022166002F91C0 /* NekoDriver.cpp */,
+				EA1CD5DC21022166002F91C0 /* NekoDriverDebug.cpp */,
+				EA1CD5DD21022166002F91C0 /* NekoDriverIO.cpp */,
+				EA1CD5DE21022166002F91C0 /* NekoDriverMem.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		EA961FA220F2F9E100A7185B = {
+			isa = PBXGroup;
+			children = (
+				EA961FB420F2F9E100A7185B /* Wayback800 */,
+				EA961FCD20F2F9E100A7185B /* Wayback800Tests */,
+				EA961FAD20F2F9E100A7185B /* Frameworks */,
+				EA961FAC20F2F9E100A7185B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA961FAC20F2F9E100A7185B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA961FAB20F2F9E100A7185B /* Wayback800.app */,
+				EA961FC620F2F9E100A7185B /* Wayback800Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA961FAD20F2F9E100A7185B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA961FFA20FB4E6B00A7185B /* GLKit.framework */,
+				EA961FF820FB4E6500A7185B /* OpenGLES.framework */,
+				EA961FF620FB4E5D00A7185B /* QuartzCore.framework */,
+				EA961FAE20F2F9E100A7185B /* Foundation.framework */,
+				EA961FB020F2F9E100A7185B /* CoreGraphics.framework */,
+				EA961FB220F2F9E100A7185B /* UIKit.framework */,
+				EA961FC720F2F9E100A7185B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA961FB420F2F9E100A7185B /* Wayback800 */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5C2210203C1002F91C0 /* Visual Studio */,
+				EA961FBD20F2F9E100A7185B /* AppDelegate.h */,
+				EA961FBE20F2F9E100A7185B /* AppDelegate.mm */,
+				EA961FDD20F32DDD00A7185B /* UI Classes */,
+				EA961FC020F2F9E100A7185B /* Images.xcassets */,
+				EA1CD56F20FC7DD2002F91C0 /* Launch Screen.storyboard */,
+				EA961FB520F2F9E100A7185B /* Supporting Files */,
+				EA961FE920FA19B900A7185B /* Resources */,
+			);
+			path = Wayback800;
+			sourceTree = "<group>";
+		};
+		EA961FB520F2F9E100A7185B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA961FB620F2F9E100A7185B /* Wayback800-Info.plist */,
+				EA961FB720F2F9E100A7185B /* InfoPlist.strings */,
+				EA961FBA20F2F9E100A7185B /* main.m */,
+				EA961FBC20F2F9E100A7185B /* Wayback800-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA961FCD20F2F9E100A7185B /* Wayback800Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EA961FD320F2F9E100A7185B /* Wayback800Tests.m */,
+				EA961FCE20F2F9E100A7185B /* Supporting Files */,
+			);
+			path = Wayback800Tests;
+			sourceTree = "<group>";
+		};
+		EA961FCE20F2F9E100A7185B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA961FCF20F2F9E100A7185B /* Wayback800Tests-Info.plist */,
+				EA961FD020F2F9E100A7185B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA961FDD20F32DDD00A7185B /* UI Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA961FED20FA1D7D00A7185B /* CheatTypes.cpp */,
+				EA961FEE20FA1D7D00A7185B /* CheatTypes.h */,
+				EA961FE120F3AE8900A7185B /* KeyItem.cpp */,
+				EA961FE220F3AE8900A7185B /* KeyItem.h */,
+				EA961FDE20F32E4000A7185B /* MainViewController.h */,
+				EA961FDF20F32E4000A7185B /* MainViewController.mm */,
+				EA961FE620F7412700A7185B /* MyRectButton.h */,
+				EA961FE720F7412700A7185B /* MyRectButton.m */,
+				EA1CD59C20FFBE05002F91C0 /* MyGLKLCDView6.h */,
+				EA1CD59D20FFBE05002F91C0 /* MyGLKLCDView6.mm */,
+				EACE6B7A21037AD200F76D67 /* GLHelper.mm */,
+				EACE6B7C21037AE200F76D67 /* GLHelper.h */,
+			);
+			name = "UI Classes";
+			sourceTree = "<group>";
+		};
+		EA961FE920FA19B900A7185B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD5C121020237002F91C0 /* ROMs */,
+				EA961FEA20FA19FE00A7185B /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA961FEA20FA19FE00A7185B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EA1CD59720FFAB03002F91C0 /* particle.png */,
+				EA1CD57E20FE494A002F91C0 /* numbertest.png */,
+				EACE6B7D2105231900F76D67 /* lcdstripe_slice_w1313.json */,
+				EACE6B77210288AC00F76D67 /* lcdstripe_slice_w938.json */,
+				EA1CD59F20FFDA06002F91C0 /* lcdstripe_slice_w562.json */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA961FAA20F2F9E100A7185B /* Wayback800 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA961FD720F2F9E100A7185B /* Build configuration list for PBXNativeTarget "Wayback800" */;
+			buildPhases = (
+				EA961FA720F2F9E100A7185B /* Sources */,
+				EA961FA820F2F9E100A7185B /* Frameworks */,
+				EA961FA920F2F9E100A7185B /* Resources */,
+				EACE6B7921028A6E00F76D67 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wayback800;
+			productName = Wayback800;
+			productReference = EA961FAB20F2F9E100A7185B /* Wayback800.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA961FC520F2F9E100A7185B /* Wayback800Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA961FDA20F2F9E100A7185B /* Build configuration list for PBXNativeTarget "Wayback800Tests" */;
+			buildPhases = (
+				EA961FC220F2F9E100A7185B /* Sources */,
+				EA961FC320F2F9E100A7185B /* Frameworks */,
+				EA961FC420F2F9E100A7185B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA961FCC20F2F9E100A7185B /* PBXTargetDependency */,
+			);
+			name = Wayback800Tests;
+			productName = Wayback800Tests;
+			productReference = EA961FC620F2F9E100A7185B /* Wayback800Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA961FA320F2F9E100A7185B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = banxian;
+				TargetAttributes = {
+					EA961FAA20F2F9E100A7185B = {
+						DevelopmentTeam = 63RLJMTUYW;
+					};
+					EA961FC520F2F9E100A7185B = {
+						TestTargetID = EA961FAA20F2F9E100A7185B;
+					};
+				};
+			};
+			buildConfigurationList = EA961FA620F2F9E100A7185B /* Build configuration list for PBXProject "Wayback800" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA961FA220F2F9E100A7185B;
+			productRefGroup = EA961FAC20F2F9E100A7185B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA961FAA20F2F9E100A7185B /* Wayback800 */,
+				EA961FC520F2F9E100A7185B /* Wayback800Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA961FA920F2F9E100A7185B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACE6B78210288AC00F76D67 /* lcdstripe_slice_w938.json in Resources */,
+				EA1CD5EA21025948002F91C0 /* cc800.fls in Resources */,
+				EA961FB920F2F9E100A7185B /* InfoPlist.strings in Resources */,
+				EA1CD5A020FFDA06002F91C0 /* lcdstripe_slice_w562.json in Resources */,
+				EA961FC120F2F9E100A7185B /* Images.xcassets in Resources */,
+				EA1CD57020FC7DD2002F91C0 /* Launch Screen.storyboard in Resources */,
+				EA1CD57F20FE494A002F91C0 /* numbertest.png in Resources */,
+				EACE6B7E2105231900F76D67 /* lcdstripe_slice_w1313.json in Resources */,
+				EA1CD59820FFAB03002F91C0 /* particle.png in Resources */,
+				EA1CD5E921025948002F91C0 /* brom.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA961FC420F2F9E100A7185B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA961FD220F2F9E100A7185B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA961FA720F2F9E100A7185B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA961FE320F3AE8900A7185B /* KeyItem.cpp in Sources */,
+				EA1CD5CF21021F67002F91C0 /* w65c02cpu.cpp in Sources */,
+				EACE6B7B21037AD200F76D67 /* GLHelper.mm in Sources */,
+				EA1CD5DF21022166002F91C0 /* AddonFuncUnt.cpp in Sources */,
+				EA1CD5E221022166002F91C0 /* NekoDriver.cpp in Sources */,
+				EA1CD5E321022166002F91C0 /* NekoDriverDebug.cpp in Sources */,
+				EA961FEF20FA1D7D00A7185B /* CheatTypes.cpp in Sources */,
+				EA1CD5CD21021F67002F91C0 /* 65C02.cpp in Sources */,
+				EA1CD5E421022166002F91C0 /* NekoDriverIO.cpp in Sources */,
+				EA1CD5E521022166002F91C0 /* NekoDriverMem.cpp in Sources */,
+				EA1CD5E021022166002F91C0 /* AddonFuncUntObjc.mm in Sources */,
+				EA961FBF20F2F9E100A7185B /* AppDelegate.mm in Sources */,
+				EA961FE020F32E4000A7185B /* MainViewController.mm in Sources */,
+				EA961FBB20F2F9E100A7185B /* main.m in Sources */,
+				EA1CD5CE21021F67002F91C0 /* 65C02CPU.c in Sources */,
+				EA1CD59E20FFBE05002F91C0 /* MyGLKLCDView6.mm in Sources */,
+				EA1CD5D021021F67002F91C0 /* w65c02op.cpp in Sources */,
+				EA1CD5E121022166002F91C0 /* DbCentre.cpp in Sources */,
+				EA961FE820F7412700A7185B /* MyRectButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA961FC220F2F9E100A7185B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA961FD420F2F9E100A7185B /* Wayback800Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA961FCC20F2F9E100A7185B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA961FAA20F2F9E100A7185B /* Wayback800 */;
+			targetProxy = EA961FCB20F2F9E100A7185B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA961FB720F2F9E100A7185B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA961FB820F2F9E100A7185B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA961FD020F2F9E100A7185B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA961FD120F2F9E100A7185B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA961FD520F2F9E100A7185B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA961FD620F2F9E100A7185B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA961FD820F2F9E100A7185B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 63RLJMTUYW;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wayback800/Wayback800-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HANDYPSP,
+					FAKENMI,
+					USE_BUSROM,
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "Wayback800/Wayback800-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA961FD920F2F9E100A7185B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 63RLJMTUYW;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wayback800/Wayback800-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HANDYPSP,
+					FAKENMI,
+					USE_BUSROM,
+				);
+				INFOPLIST_FILE = "Wayback800/Wayback800-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EA961FDB20F2F9E100A7185B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wayback800.app/Wayback800";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wayback800/Wayback800-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Wayback800Tests/Wayback800Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EA961FDC20F2F9E100A7185B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Wayback800.app/Wayback800";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Wayback800/Wayback800-Prefix.pch";
+				INFOPLIST_FILE = "Wayback800Tests/Wayback800Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA961FA620F2F9E100A7185B /* Build configuration list for PBXProject "Wayback800" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA961FD520F2F9E100A7185B /* Debug */,
+				EA961FD620F2F9E100A7185B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA961FD720F2F9E100A7185B /* Build configuration list for PBXNativeTarget "Wayback800" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA961FD820F2F9E100A7185B /* Debug */,
+				EA961FD920F2F9E100A7185B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA961FDA20F2F9E100A7185B /* Build configuration list for PBXNativeTarget "Wayback800Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA961FDB20F2F9E100A7185B /* Debug */,
+				EA961FDC20F2F9E100A7185B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA961FA320F2F9E100A7185B /* Project object */;
+}
