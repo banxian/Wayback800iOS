@@ -184,12 +184,23 @@ void NekoDriverLCDChangedCallback();
             keySubscriptFontSize = 9;
             keyLabelFontSize = 7;
             
-            MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 23 * 9)]; // 60 *9 = 540
-            glkview.lcdbuffer = &renderLCDBuffer;
-            glkview.lcdpos = QPoint(45, 75);
-            lcdchangelistener = glkview;
-            [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
-            [self.view addSubview:glkview];
+            if (stageSize.height == 2688) {
+                // XS Max
+                MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 210, 414, 23 * 9)]; // 60 *9 = 540
+                glkview.lcdbuffer = &renderLCDBuffer;
+                glkview.lcdpos = QPoint(45, 75);
+                lcdchangelistener = glkview;
+                [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
+                [self.view addSubview:glkview];
+            }
+            else {
+                MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 23 * 9)]; // 60 *9 = 540
+                glkview.lcdbuffer = &renderLCDBuffer;
+                glkview.lcdpos = QPoint(45, 75);
+                lcdchangelistener = glkview;
+                [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
+                [self.view addSubview:glkview];
+            }
 
         }
         if (stageSize.width == 1125) {
