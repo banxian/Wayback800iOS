@@ -169,6 +169,9 @@ void NekoDriverLCDChangedCallback();
         if (stageSize.width == 750) {
             // iphone 6, 6s, 7, 8
         }
+        if (stageSize.width == 828) {
+            // iphone XR
+        }
         if (stageSize.width == 1242) {
             // 6+, 6s+, 7+, 8+ realsize is 1080
             keypadRect = CGRectMake(3, 444, 407, 168);
@@ -183,25 +186,19 @@ void NekoDriverLCDChangedCallback();
             keySingleCaptionFontSizeSmall = 12;
             keySubscriptFontSize = 9;
             keyLabelFontSize = 7;
-            
+            MyGLKLCDView6* glkview;
             if (stageSize.height == 2688) {
                 // XS Max
-                MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 210, 414, 23 * 9)]; // 60 *9 = 540
-                glkview.lcdbuffer = &renderLCDBuffer;
-                glkview.lcdpos = QPoint(45, 75);
-                lcdchangelistener = glkview;
-                [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
-                [self.view addSubview:glkview];
+                glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 210, 414, 23 * 9)]; // 60 *9 = 540
             }
             else {
-                MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 23 * 9)]; // 60 *9 = 540
-                glkview.lcdbuffer = &renderLCDBuffer;
-                glkview.lcdpos = QPoint(45, 75);
-                lcdchangelistener = glkview;
-                [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
-                [self.view addSubview:glkview];
+                glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 23 * 9)]; // 60 *9 = 540
             }
-
+            glkview.lcdbuffer = &renderLCDBuffer;
+            glkview.lcdpos = QPoint(45, 75);
+            lcdchangelistener = glkview;
+            [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
+            [self.view addSubview:glkview];
         }
         if (stageSize.width == 1125) {
             // iphone x, 375*3
