@@ -25,6 +25,7 @@
 		EA1CD5E521022166002F91C0 /* NekoDriverMem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD5DE21022166002F91C0 /* NekoDriverMem.cpp */; };
 		EA1CD5E921025948002F91C0 /* brom.bin in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD5E721025948002F91C0 /* brom.bin */; };
 		EA1CD5EA21025948002F91C0 /* cc800.fls in Resources */ = {isa = PBXBuildFile; fileRef = EA1CD5E821025948002F91C0 /* cc800.fls */; };
+		EA53606B215FF78F00F9CA00 /* lcdstripe_slice_w1124.json in Resources */ = {isa = PBXBuildFile; fileRef = EA53606A215FF78F00F9CA00 /* lcdstripe_slice_w1124.json */; };
 		EA961FAF20F2F9E100A7185B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FAE20F2F9E100A7185B /* Foundation.framework */; };
 		EA961FB120F2F9E100A7185B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FB020F2F9E100A7185B /* CoreGraphics.framework */; };
 		EA961FB320F2F9E100A7185B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA961FB220F2F9E100A7185B /* UIKit.framework */; };
@@ -102,6 +103,7 @@
 		EA1CD5E621022176002F91C0 /* AddonFuncUnt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddonFuncUnt.h; sourceTree = "<group>"; };
 		EA1CD5E721025948002F91C0 /* brom.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = brom.bin; sourceTree = "<group>"; };
 		EA1CD5E821025948002F91C0 /* cc800.fls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cc800.fls; sourceTree = "<group>"; };
+		EA53606A215FF78F00F9CA00 /* lcdstripe_slice_w1124.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lcdstripe_slice_w1124.json; sourceTree = "<group>"; };
 		EA961FAB20F2F9E100A7185B /* Wayback800.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wayback800.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA961FAE20F2F9E100A7185B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA961FB020F2F9E100A7185B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -334,6 +336,7 @@
 			children = (
 				EA1CD59720FFAB03002F91C0 /* particle.png */,
 				EA1CD57E20FE494A002F91C0 /* numbertest.png */,
+				EA53606A215FF78F00F9CA00 /* lcdstripe_slice_w1124.json */,
 				EACE6B7D2105231900F76D67 /* lcdstripe_slice_w1313.json */,
 				EACE6B77210288AC00F76D67 /* lcdstripe_slice_w938.json */,
 				EA1CD59F20FFDA06002F91C0 /* lcdstripe_slice_w562.json */,
@@ -423,6 +426,7 @@
 				EACE6B78210288AC00F76D67 /* lcdstripe_slice_w938.json in Resources */,
 				EA1CD5EA21025948002F91C0 /* cc800.fls in Resources */,
 				EA961FB920F2F9E100A7185B /* InfoPlist.strings in Resources */,
+				EA53606B215FF78F00F9CA00 /* lcdstripe_slice_w1124.json in Resources */,
 				EA1CD5A020FFDA06002F91C0 /* lcdstripe_slice_w562.json in Resources */,
 				EA961FC120F2F9E100A7185B /* Images.xcassets in Resources */,
 				EA1CD57020FC7DD2002F91C0 /* Launch Screen.storyboard in Resources */,

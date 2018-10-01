@@ -145,7 +145,7 @@ void NekoDriverLCDChangedCallback();
         //memset(renderLCDBuffer.fPixel, 0xFF, sizeof(renderLCDBuffer.fPixel));
 
         if (stageSize.width == 640) {
-            // iphone 2x
+            // iphone 4,5 2x
             keypadRect = CGRectMake(1, 244, 318, 168);
             keyColWidth = 30;
             keyColPad = 2; // 60*10+4*9
@@ -161,9 +161,9 @@ void NekoDriverLCDChangedCallback();
             
             MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 320, 160)];// 120 + 20
             glkview.lcdbuffer = &renderLCDBuffer;
-            glkview.lcdpos = QPoint(24, 45);
+            glkview.lcdpos = QPoint(24, 45); // pixel offset
             lcdchangelistener = glkview;
-            [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w562" ofType:@"json"] frontPanel:@"frontpanel"];
+            [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w562" ofType:@"json"] frontPanel:@"frontpanel"]; // pixel
             [self.view addSubview:glkview];
         }
         if (stageSize.width == 750) {
@@ -173,7 +173,8 @@ void NekoDriverLCDChangedCallback();
             // iphone XR
         }
         if (stageSize.width == 1242) {
-            // 6+, 6s+, 7+, 8+ realsize is 1080
+            // 6+, 6s+, 7+, 8+ realsize is 1080, 23 logic point is 60 physical pixel
+            // Xs Max have 1242 realsize
             keypadRect = CGRectMake(3, 444, 407, 168);
             keyColWidth = 38;
             keyColPad = 3; // 380+27+7
@@ -189,16 +190,20 @@ void NekoDriverLCDChangedCallback();
             MyGLKLCDView6* glkview;
             if (stageSize.height == 2688) {
                 // XS Max
-                glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 210, 414, 23 * 9)]; // 60 *9 = 540
+                glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 690/3)];
+                glkview.lcdbuffer = &renderLCDBuffer;
+                glkview.lcdpos = QPoint(40, 128); // inpixel
+                lcdchangelistener = glkview;
+                [glkview initLCDStripe:@"lcdstripexsm" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w1124" ofType:@"json"] frontPanel:@"frontpanelxsm"];
             }
             else {
-                glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 23 * 9)]; // 60 *9 = 540
+                glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, (540/60)*23)]; // 60 *9 = 540
+                glkview.lcdbuffer = &renderLCDBuffer;
+                glkview.lcdpos = QPoint(45, 75);
+                lcdchangelistener = glkview;
+                [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
             }
-            glkview.lcdbuffer = &renderLCDBuffer;
-            glkview.lcdpos = QPoint(45, 75);
-            lcdchangelistener = glkview;
-            [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanel"];
-            [self.view addSubview:glkview];
+           [self.view addSubview:glkview];
         }
         if (stageSize.width == 1125) {
             // iphone x, 375*3
@@ -215,9 +220,9 @@ void NekoDriverLCDChangedCallback();
             keySubscriptFontSize = 8;
             keyLabelFontSize = 6;
             
-            MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 23 * 9)]; // 60 *9 = 540
+            MyGLKLCDView6* glkview = [[MyGLKLCDView6 alloc] initWithFrame:CGRectMake(0, 0, 414, 600/3)];
             glkview.lcdbuffer = &renderLCDBuffer;
-            glkview.lcdpos = QPoint(67, 75);
+            glkview.lcdpos = QPoint(67, 135);
             lcdchangelistener = glkview;
             // share same 3x on 1080/1125 width but large frontpanel
             [glkview initLCDStripe:@"lcdstripe" withJsonFile:[[NSBundle mainBundle] pathForResource:@"lcdstripe_slice_w938" ofType:@"json"] frontPanel:@"frontpanelx"];
